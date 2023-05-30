@@ -5,17 +5,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flower Identification</title>
-
+    <link rel="stylesheet" href="style.css" />
     <script src="index.js"></script> 
 </head>
 
-<body>
-  <form>
-    <label for="flower">Upload the picture of the flower</label>
-    <input type="file" multiple  />
-    <button type="button" onclick="sendIdentification()">OK</button>
-  </form>
+<body align="center">
+  <header>FloraScan🌸️</header>
 
-</body>
+  <div class="flower_image">
+    <img src="https://cdn.pixabay.com/photo/2012/09/08/21/51/flower-56414_1280.jpg" alt="image of plant" width="600px">
+  </div>
+  
+  <div class="input">
+    <form id="flower_input">
+        <label id="label_flower" for="flower">Upload the picture of the flower</label>
+        <br>
+        <input  id="input_flower" type="file" multiple  />
+        <!-- <label for="files">Select file</label> -->
+        <br>
+        
+        <button type="button" onclick="sendIdentification()">Upload</button>
+      </form>
+  </div>
+  
+
+
+  <!-- <form></form>
+    <div id="common_name"> just here </div>
+    <div id="taxonomy"> </div> 
+  </form> -->
+
+ <table border="" align="center">
+    <tr>
+      <th>Scientific name</th>
+      <th>Common name</th>
+      <th>Family</th>
+      <th>Genus</th>
+      <!-- <th>Species</th> -->
+    </tr>
+    <tr id="plant_details">
+      <td id="scientific_name"> </td>
+      <td id="common_name">  </td>
+      <td id="family"> </td>
+      <td id="genus">  </td>
+      <!-- <td id="species"> here</td> -->
+    </tr>
+  </table> 
+
+  </body>
 
 </html>
